@@ -240,7 +240,13 @@ body {
 
 /* small screens */
 @media (max-width: 520px) {
-  .slide { width: 170px; height: 260px; padding: 12px; }
+  .modal-box {
+    max-height: calc(100vh - 24px);
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  .track { height: 400px; }
+  .slide { width: 170px; height: 380px; padding: 12px; }
   .slide.prev { transform: translateX(-105%) scale(0.75); }
   .slide.next { transform: translateX(5%) scale(0.75); }
 }
