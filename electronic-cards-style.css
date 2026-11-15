@@ -1,0 +1,246 @@
+/* Palette: #81A6C6  #AACDDC  #F3E3D0  #D2C4B4 */
+body {
+  margin: 0;
+  padding: 30px 15px;
+  background-color: #F3E3D0;
+  font-family: Arial, sans-serif;
+  color: #2f4558; /* dark text for readability */
+}
+
+.page-title{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.page-subtitle{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.card-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card{
+    width: 180px;
+    height: 290px;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card.first-card, .card.fifth-card{
+    background-color: #81A6C6;
+}
+
+.card.second-card, .card.fourth-card{
+    background-color: #AACDDC;
+}
+
+.card.third-card{
+    background-color: #D2C4B4;
+}
+
+.card img{
+    width: 120px;
+    height: 120px;
+    margin-bottom: 3px;
+}
+
+.card h3{
+    margin: 0 0 8px 0;
+}
+
+.card .about{
+    margin: 0;
+    font-size: 14px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.card.hovered{
+    transform: translateY(-10px) scale(1.05);
+}
+
+.card.hovered .about{
+    max-height: 100px;
+    opacity: 1;
+}
+
+/*Modal*/
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 69, 88, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal.open{
+    display: flex;
+}
+
+.modal-box{
+    position: relative;
+    width: 92%;
+    max-width: 760px;
+    padding: 25px 10px 20px;
+    background-color: #F3E3D0;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.modal-title{
+    margin: 0 0 15px 0;
+}
+
+.modal.first-card .slide, .modal.fifth-card .slide{
+    background-color: #81A6C6; 
+}
+
+.modal.second-card .slide, .modal.fourth-card .slide{
+    background-color: #AACDDC;
+}
+
+.modal.third-card .slide{
+    background-color: #D2C4B4;
+}
+
+.close-button{
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    border: none;
+    background-color: #D2C4B4;
+    color: #2f4558;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/*CAROUSEL*/
+.carousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-arrow{
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background-color: #81A6C6;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.nav-arrow:hover{
+    background-color: #2f4558; 
+}
+
+.track{
+    position: relative;
+    flex: 1;
+    height: 320px;
+    overflow: hidden;
+}
+
+.slide{
+    position: absolute;
+    top: 10px; left: 50%;
+    width: 210px;
+    height: 290px;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) scale(0.7);
+    transition: all 0.5s;
+}
+
+.slide .modal-subtitle{
+    margin: 5px 0 3px 0;
+    font-size: 13px;
+}
+
+.slide h3{
+    margin: 0;
+    font-size: 22px;
+}
+
+.slide p{
+    max-width: 100%;
+    overflow-wrap: anywhere; 
+}
+
+.slide h3 + p{
+    margin-top: 12px;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 3;
+  transform: translateX(-50%) scale(1);
+}
+.slide.prev {
+  opacity: 0.6;
+  z-index: 2;
+  transform: translateX(-120%) scale(0.8);
+}
+.slide.next {
+  opacity: 0.6;
+  z-index: 2;
+  transform: translateX(20%) scale(0.8);
+}
+
+/*DOTS*/
+.dots { margin-top: 12px; }
+
+.dot {
+  display: inline-block;
+  width: 10px; height: 10px;
+  margin: 0 4px;
+  border-radius: 50%;
+  background-color: #D2C4B4;
+  cursor: pointer;
+}
+.dot.active { background-color: #81A6C6; transform: scale(1.4); }
+
+/* small screens */
+@media (max-width: 520px) {
+  .slide { width: 170px; height: 260px; padding: 12px; }
+  .slide.prev { transform: translateX(-105%) scale(0.75); }
+  .slide.next { transform: translateX(5%) scale(0.75); }
+}

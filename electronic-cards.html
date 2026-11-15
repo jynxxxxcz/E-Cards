@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Electronic Cards | IT-WS02</title>
+        <link rel="stylesheet" type="text/css" href="electronic-cards-style.css">
+    </head>
+
+    <body>
+        <h1 class="page-title">For you, Ma'am Roan.</h1>
+        <p class="page-subtitle">Hover over a card to peek | Click a card to open</p>
+
+        <div class="card-grid">
+            <div class="card first-card" id="card1" tabindex="0">
+                <img src="images/gratitude-icon.png">
+                <h3>Gratitude</h3>
+                <p class="about">Thank you for your patience and guidance.</p>
+            </div>
+
+            <div class="card second-card" id="card2" tabindex="0">
+                <img src="images/appreciation-icon.png">
+                <h3>Appreciation</h3>
+                <p class="about">Thank you for making ITWS02 fun.</p>
+            </div>
+
+            <div class="card third-card" id="card3" tabindex="0">
+                <img src="images/inspiration-icon.png">
+                <h3>Inspiration</h3>
+                <p class="about">You inspired us to keep learning.</p>
+            </div>
+
+            <div class="card fourth-card" id="card4" tabindex="0">
+                <img src="images/common-ground-icon.png">
+                <h3>Common Ground</h3>
+                <p class="about">The things we have in common.</p>
+            </div>
+
+            <div class="card fifth-card" id="card5" tabindex="0">
+                <img src="images/best-wishes-icon.png">
+                <h3>Best Wishes</h3>
+                <p class="about">Wishing you good health and future students the best.</p>
+            </div>
+        </div>
+
+        <!--Card 1 Modal: Gratitude-->
+        <div class="modal first-card" id="modal1">
+            <div class="modal-box">
+                <button class="close-button">X</button>
+                <h2 class="modal-title">Gratitude</h2>
+                <div class="carousel">
+                    <button class="nav-arrow prev-btn">&lt;</button>
+                    <div class="track">
+                        <div class="slide">
+                            <p class="modal-subtitle">Thank you for the</p>
+                            <h3>PATIENCE</h3>
+                            <p>
+                                I very much thank you po for the pasensya. 
+                                Kahit po minsan sabay sabay naglo-loading utak natin sa klase, 
+                                hindi po 'yun nagiging dahilan para pabayaan niyo kami, YEY?!
+                            </p>
+                        </div>
+
+                        <div class="slide">
+                            <p class="modal-subtitle">Thank you for the</p>
+                            <h3>GUIDANCE</h3>
+                            <p>
+                                Hindi niyo po kami binakuran kung ano lang pwedeng gamitin sa mga 
+                                Lab Exercises, especially sa Case Study, instead po, 
+                                inalalayan niyo pa po kami, maramiiiiing salamat poooo!
+                            </p>
+                        </div>
+                        
+                        <div class="slide">
+                            <p class="modal-subtitle">Thank you for</p>
+                            <h3>NOT GIVING UP ON US</h3>
+                            <p>Sa loob po ng isang semester, sobrang naging mabuti po kayo sa amin. 
+                                I'm soafer glad po na ginawa niyo or tried na maging close sa amiiin 
+                                (sana po 'di magtapos doon 'yon, kz e>_<).
+                            </p>
+                        </div>
+                    </div>
+                    <button class="nav-arrow next-btn">&gt;</button>
+                </div>
+                <div class="dots"></div>
+            </div>
+        </div>
+
+        <!-- Card 2 Modal: Appreciation -->
+        <div class="modal second-card" id="modal2">
+            <div class="modal-box">
+                <button class="close-button">X</button>
+                <h2 class="modal-title">Appreciation</h2>
+                <div class="carousel">
+                    <button class="nav-arrow prev-btn">&lt;</button>
+                    <div class="track">
+                        <div class="slide">
+                            <p class="modal-subtitle">I appreciate the</p>
+                            <h3>FUN LESSONS</h3>
+                            <p>Sobrang saya po ma-stress 'pag kayo ang nagtuturo. 
+                                May halong kaba pero dedma, gano'n po HAHAHAHAHHAHAHHAHAHHA>v<.
+                            </p>
+                        </div>
+
+                        <div class="slide">
+                            <p class="modal-subtitle">I appreciate all the</p>
+                            <h3>MOMENTS</h3>
+                            <p>
+                                Ma'am, bet ko po 'yung nag-o-overthink akong papasok 
+                                dahil hindi ko po alam kung may gagawin o may ipapagawa kayo, 
+                                'tas nagkwentuhan lang po tayo buong time ng klase. 
+                            </p>
+                        </div>
+                        
+                        <div class="slide">
+                            <p class="modal-subtitle">I appreciate the</p>
+                            <h3>CHILL VIBES</h3>
+                            <p>
+                                Kahit po deadline na, hindi niyo po pinaparamdam na katapusan na ng mundo. 
+                                Promise po, hindi namin inaabuso ang extension (konti lang po).
+                            </p>
+                        </div>
+                    </div>
+                    <button class="nav-arrow next-btn">&gt;</button>
+                </div>
+                <div class="dots"></div>
+            </div>
+        </div>
+
+        <!--Card 3 Modal: Inspiration -->
+        <div class="modal third-card" id="modal3">
+            <div class="modal-box">
+                <button class="close-button">X</button>
+                <h2 class="modal-title">Inspiration</h2>
+                <div class="carousel">
+                    <button class="nav-arrow prev-btn">&lt;</button>
+                    <div class="track">
+                        <div class="slide">
+                            <p class="modal-subtitle">You inspired me to</p>
+                            <h3>TRY</h3>
+                            <p>Talaga po, minsan gusto ko na lang pagdabugan 'tong 
+                                kung ano man na code kasi hindi ko makuha gusto kong 
+                                style at behavior pero sige po kz ikaw naman po ang pupuntahan 
+                                na 'to para ma-check.
+                            </p>
+                        </div>
+
+                        <div class="slide">
+                            <p class="modal-subtitle">You inspired me to</p>
+                            <h3>EXPLORE</h3>
+                            <p>
+                                Ikinukulong ko rin po kasi sarili ko sa mga tinuturo lang talaga. 
+                                Kaya grateful po ako na pinayagan niyo po kami gumamit ng mga 
+                                hindi po naituro sa aminnnn.
+                            </p>
+                        </div>
+
+                        <div class="slide">
+                            <p class="modal-subtitle">You inspired me to not</p>
+                            <h3>OVERTHINK</h3>
+                            <p>
+                                Hindi po kami nag-overthink sa Case Study kasi 'yun po sabi niyooo.  
+                                Kaso kung nagtanong po siguro kayo about it, ang maisasagot po namin, 
+                                "sabi niyo po 'wag kami mag-overthink"
+                            </p>
+                        </div>
+                    </div>
+                    <button class="nav-arrow next-btn">&gt;</button>
+                </div>
+                <div class="dots"></div>
+            </div>
+        </div>
+
+        <!-- Card 4 Modal: Common Ground -->
+        <div class="modal fourth-card" id="modal4">
+            <div class="modal-box">
+                <button class="close-button">X</button>
+                <h2 class="modal-title">Common Ground</h2>
+                <div class="carousel">
+                    <button class="nav-arrow prev-btn">&lt;</button>
+                    <div class="track">
+                        <div class="slide">
+                            <p class="modal-subtitle">I think we both don't like</p>
+                            <h3>EXPECTING</h3>
+                            <p>
+                                Noong sinabi niyo po na nasa inyo po 'yung sisi kasi nag-expect po kayo sa amin. 
+                                Naisip ko lang po na somehow, sa ganoong situation, 
+                                ganoon din ako. Lalo na po 'pag nabibigo unexpectedly.
+                            </p>
+                        </div>
+
+                        <div class="slide">
+                            <p class="modal-subtitle">I think we both don't like</p>
+                            <h3>ACCEPTING GIFTS</h3>
+                            <p>
+                                Katulad niyo po talaga, ayoko rin po nakakatanggap bigla bigla 
+                                ng mga bagay bagay o regalo na hindi ko naman po hinihingi. 
+                            </p>
+                        </div>
+
+                        <div class="slide">
+                            <p class="modal-subtitle">I think we both don't like</p>
+                            <h3>SORRYs</h3>
+                            <p>
+                                'Pag po talaga may nangyari na worth apologizing for po, ta's may nag-apologize or 
+                                nag-sorry kahit alam po nila sa sarili nilang wala silang kinalaman doon, hindi po 
+                                maganda pakinggan HAHHAHAHAHAH.
+                            </p>
+                        </div>
+                    </div>
+                    <button class="nav-arrow next-btn">&gt;</button>
+                </div>
+                <div class="dots"></div>
+            </div>
+        </div>
+
+        <!-- Card 5 Modal: Best Wishes -->
+        <div class="modal fifth-card" id="modal5">
+            <div class="modal-box">
+                <button class="close-button">X</button>
+                <h2 class="modal-title">Best Wishes</h2>
+                <div class="carousel">
+                    <button class="nav-arrow prev-btn">&lt;</button>
+                    <div class="track">
+                        <div class="slide">
+                            <p class="modal-subtitle">Best wishes to you for</p>
+                            <h3>NEXT STUDENTS</h3>
+                            <p>
+                                Sana po maging ganito rin sila ka-grateful sa inyo without betraying your trust. 
+                                Pero kung hindi po, alam ko pong kaya n'yo pa rin sila, I meeeeaaan, nakaya niyo po 
+                                kami and andiyan pa rin po kayo ///>.<\\\
+                            </p>
+                        </div>
+
+                        <div class="slide">
+                            <p class="modal-subtitle">Best wishes to you for</p>
+                            <h3>WORK</h3>
+                            <p> 
+                                May your work always run smoothly pooo.  Sobrang nagagalingan na po ako sa inyo 
+                                kaya wala na ako masabi HWHHAHAHAHHAHAH.
+                            </p>
+                        </div>
+
+                        <div class="slide">
+                            <p class="modal-subtitle">Best wishes to you for</p>
+                            <h3>NEW CHANCES</h3>
+                            <p>
+                                This sounds ridiculous po pero sana kayo ang antayin ng opportunities HAHAHAHAHAHAH. 
+                                But 'yun po. May every opportunity you're waiting for come your way, 
+                                even when you're not expecting it. You deserve all the good things ahead, Ma'am!
+                            </p>
+                        </div>
+                    </div>
+                    <button class="nav-arrow next-btn">&gt;</button>
+                </div>
+                <div class="dots"></div>
+            </div>
+        </div>
+        <script src="electronic-cards-behavior.js"></script>
+    </body>
+</html>
